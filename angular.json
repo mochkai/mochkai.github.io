@@ -31,9 +31,26 @@
               "src/assets"
             ],
             "styles": [
+              "src/vendors/bootstrap/bootstrap.css",
+	            "src/vendors/linericon/style.css",
+	            "src/vendors/font-awesome/font-awesome.min.css",
+	            "src/vendors/owl-carousel/owl.carousel.min.css",
+	            "src/vendors/jquery/magnific-popup.css",
+	            "src/vendors/nice-select/css/nice-select.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/vendors/jquery/jquery-3.2.1.min.js",
+	            "src/vendors/popper/popper.js",
+	            "src/vendors/bootstrap/bootstrap.min.js",
+	            "src/vendors/stellar/stellar.js",
+	            "src/vendors/jquery/jquery.magnific-popup.min.js",
+	            "src/vendors/nice-select/js/jquery.nice-select.min.js",
+	            "src/vendors/isotope/imagesloaded.pkgd.min.js",
+	            "src/vendors/isotope/isotope-min.js",
+	            "src/vendors/owl-carousel/owl.carousel.min.js",
+	            "src/vendors/jquery/jquery.ajaxchimp.min.js"
+            ]
           },
           "configurations": {
             "production": {

@@ -1,0 +1,19 @@
+@import "mixins";
+
+%gradient-bg {
+	@include gradient(90deg, var(--primary-color) 0%, var(--primary-color2) 100%);
+}
+
+%border-gradient {
+	@include border-gradient(90deg, var(--primary-color) 0%, var(--primary-color2) 100%);
+}
+
+%gradient-bg2 {
+	@include gradient(90deg, var(--primary-color) 0%, var(--primary-color2) 100%);
+}
+
+%gradient-color {
+	@include gradient(90deg, var(--primary-color) 0%, var(--primary-color2) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}

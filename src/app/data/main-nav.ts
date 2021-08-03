@@ -1,4 +1,3 @@
-import { homedir } from 'os';
 import { Nav } from '../models/Nav';
 
 export const MAIN_NAV: Nav[] = [
@@ -29,7 +28,7 @@ export const MAIN_NAV: Nav[] = [
       {
         order: 1,
         route: 'open-source',
-        label: 'Open Source Projects'
+        label: 'Open Source'
       },
       {
         order: 2,

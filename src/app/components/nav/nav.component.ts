@@ -7,7 +7,7 @@ import { Nav } from 'src/app/models/Nav';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
-  @Input() nav: Nav
+  @Input() nav!: Nav[]
 
   constructor() { }
 

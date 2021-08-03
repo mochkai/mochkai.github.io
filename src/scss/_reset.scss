@@ -1,9 +1,9 @@
 body {
 	line-height: 26px;
 	font-size: 15px;
-	font-family: var(--primary-font);
+	font-family: $primary-font;
 	font-weight: 400;
-	color: var(--text-color);
+	color: $text-color;
 	background: url(../assets/img/body-bg.png) no-repeat center;
 }
 
@@ -13,9 +13,9 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: var(--title-font);
+	font-family: $title-font;
 	font-weight: 500;
-	color: var(--title-color);
+	color: $title-color;
 }
 
 .list {

@@ -4,19 +4,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { NavigationComponent } from './components/navigation/navigation.component';
-import { NavigationItemComponent } from './components/navigation-item/navigation-item.component';
 import { NavItemComponent } from './components/nav-item/nav-item.component';
 import { NavComponent } from './components/nav/nav.component';
+import { BannerComponent } from './components/banner/banner.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    NavigationComponent,
-    NavigationItemComponent,
     NavItemComponent,
-    NavComponent
+    NavComponent,
+    BannerComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,

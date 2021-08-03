@@ -143,8 +143,8 @@
 		}
 	}
 	.lage {
-		color: var(--primary-color2);
-		font-family: var(--title-font);
+		color: $primary-color2;
+		font-family: $title-font;
 		font-size: 100px;
 		font-weight: 700;
 		line-height: 85px;
@@ -153,8 +153,8 @@
 	}
 	.smll {
 		text-align: left;
-		color: var(--title-color);
-		font-family: var(--title-font);
+		color: $title-color;
+		font-family: $title-font;
 		font-size: 20px;
 		margin-left: 20px;
 	}
@@ -172,7 +172,7 @@
 		}
 	}
 	p {
-		color: var(--primary-color2);
+		color: $primary-color2;
 		font-size: 16px;
 		text-transform: uppercase;
 		margin-bottom: 5px;
@@ -180,7 +180,7 @@
 	span {
 		font-size: 60px;
 		font-weight: 700;
-		color: var(--title-color);
+		color: $title-color;
 	}
 }
 /* End Brand Area css
@@ -211,7 +211,7 @@
 				@include transition();
 				&:hover,
 				&.active {
-					color: var(--primary-color2);
+					color: $primary-color2;
 				}
 				@media (max-width: 767px) {
 					margin-right: 20px;
@@ -235,7 +235,7 @@
 			font-size: 20px;
 			margin-bottom: 0px;
 			a {
-				color: var(--title-color);
+				color: $title-color;
 			}
 		}
 	}
@@ -304,7 +304,7 @@
 			li {
 				margin-bottom: 7px;
 				span {
-					font-family: var(--title-font);
+					font-family: $title-font;
 					color: #000000;
 					font-size: 16px;
 					font-weight: 500;
@@ -344,7 +344,7 @@
 				&.active {
 					height: 12px;
 					width: 12px;
-					background: var(--primary-color2);
+					background: $primary-color2;
 				}
 			}
 			@media (max-width: 991px) {
@@ -451,7 +451,7 @@
 		border-radius: 5px;
 		line-height: 48px;
 		font-size: 14px;
-		font-family: var(--title-font);
+		font-family: $title-font;
 		padding: 0px 38px;
 		cursor: pointer;
 		@media (max-width: 767px) {

@@ -1,26 +1,10 @@
 /* Footer Area css
 ============================================================================================ */
-.blog_version {
-	.footer_area {
-		background: #f9f9fd;
-		&:before {
-			content: none;
-		}
-	}
-}
 .footer_area {
 	padding: 120px 0;
 	position: relative;
-	&:before {
-		content: '';
-		position: absolute;
-		top: -200px;
-		left: 0px;
-		right: 0px;
-		bottom: 0px;
-		background: #f9f9fd;
-		z-index: -1;
-	}
+	background: #000000;
+
 	@media (max-width: 1024px) {
 		padding: 60px 0;
 	}
@@ -28,9 +12,13 @@
 		text-align: center;
 		h4 {
 			font-size: 20px;
-			color: #000000;
+			color: #ffffff;
 			margin-top: 35px;
 			text-transform: uppercase;
+		}
+
+		img{
+			width: 100px;
 		}
 	}
 	.footer_social {

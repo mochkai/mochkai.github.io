@@ -7,19 +7,21 @@ import { Gallery } from 'src/app/models/Galley';
   styleUrls: ['./gallery-item.component.scss']
 })
 export class GalleryItemComponent implements OnInit {
-  @Input() item! : Gallery;
+  @Input() item!: Gallery;
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit(): void {
-    if (!this.item.image)
-    {
-      switch (this.item.category)
-      {
+    if (!this.item.image) {
+      switch (this.item.category) {
         case 'library':
+          this.item.image = 'assets/img/default-gallery.jpeg';
+          this.item.icon = 'book';
+          break;
         case 'project':
         default:
           this.item.image = 'assets/img/default-gallery.jpeg';
+          this.item.icon = 'code';
       }
     }
   }

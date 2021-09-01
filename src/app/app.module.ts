@@ -10,6 +10,8 @@ import { BannerComponent } from './components/banner/banner.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { GalleryItemComponent } from './components/gallery-item/gallery-item.component';
+import { BrandsComponent } from './components/brands/brands.component';
+import { WorkComponent } from './components/work/work.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { GalleryItemComponent } from './components/gallery-item/gallery-item.com
     BannerComponent,
     GalleryComponent,
     FooterComponent,
-    GalleryItemComponent
+    GalleryItemComponent,
+    BrandsComponent,
+    WorkComponent
   ],
   imports: [
     BrowserModule,

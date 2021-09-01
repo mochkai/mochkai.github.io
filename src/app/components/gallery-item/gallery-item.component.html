@@ -1,17 +1,15 @@
-<div class="col-lg-4 col-md-6 all latest">
-    <div class="portfolio_box">
-        <a href="{{item.url}}">
-            <div class="single_portfolio">
-                <img class="img-fluid w-100" src="{{item.image}}" alt="">
-                <div class="overlay"></div>
-                <div class="icon">
-                    <span class="lnr lnr-cross"></span>
-                </div>
-            </div>
-            <div class="short_info">
-                <h4>{{item.title}}</h4>
-                <p><span *ngFor='let tag of item.tags'>{{tag}}</span></p>
-            </div>
-        </a>
+<div class="portfolio_box">
+  <a href="{{item.url}}">
+    <div class="single_portfolio">
+      <img class="img-fluid w-100" src="{{item.image}}" alt="">
+      <div class="overlay"></div>
+      <div class="icon">
+        <span class="lnr lnr-{{item.icon}}"></span>
+      </div>
     </div>
+    <div class="short_info">
+      <h4>{{item.title}}</h4>
+      <p><span *ngFor='let tag of item.tags' class="portfolio-tag">{{tag}}</span></p>
+    </div>
+  </a>
 </div>

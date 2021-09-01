@@ -1,4 +1,4 @@
-<section class="brands-area" id="brands">
+<section class="brands-area section_gap_top" id="brands">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -9,8 +9,12 @@
     </div>
     <div class="row">
       <div class="col-12">
-        <div *ngFor="let item of brandItems" class="brand-item">
-          <img src="{{item.image}}" />
+        <div class="row">
+          <div *ngFor="let item of brandItems" class="col-lg-2 col-md-4 col-6">
+            <div class="brand-item">
+              <img src="{{item.image}}" />
+            </div>
+          </div>
         </div>
       </div>
     </div>

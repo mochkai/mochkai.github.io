@@ -1,1 +1,24 @@
-<p>work works!</p>
+<section class="work-area section_gap_top" id="work">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="main_title text-left">
+          <h2>Companies I worked For</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="row">
+          <div *ngFor="let item of workItems" class="col-lg-3 col-sm-6 col-12">
+            <div class="work-item">
+              <img src="{{item.image}}" />
+              <h3>{{item.title}}</h3>
+              <p>{{item.description}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

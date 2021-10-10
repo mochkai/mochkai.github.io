@@ -1,4 +1,5 @@
 export interface Brands {
   order: number,
-  image: string
+  image: string,
+  url?: string
 }

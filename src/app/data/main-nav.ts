@@ -3,42 +3,21 @@ import { Nav } from '../models/Nav';
 export const MAIN_NAV: Nav[] = [
   {
     order: 0,
-    route: 'home',
-    label: 'Home'
-  },
-  {
-    order: 1,
-    route: 'about',
+    route: '',
     label: 'About'
   },
   {
+    order: 1,
+    route: 'portfolio',
+    label: 'Portfolio'
+  },
+  {
     order: 2,
-    route: 'skills',
-    label: 'Skills'
+    route: 'social',
+    label: 'Social'
   },
   {
     order: 3,
-    label: 'Portfolio',
-    submenu: [
-      {
-        order: 0,
-        route: 'work',
-        label: 'Work'
-      },
-      {
-        order: 1,
-        route: 'open-source',
-        label: 'Open Source'
-      },
-      {
-        order: 2,
-        route: 'gaming',
-        label: 'Gaming Projects'
-      }
-    ]
-  },
-  {
-    order: 4,
     route: 'contact',
     label: 'Contact'
   }

@@ -5,6 +5,8 @@ body {
   font-weight: 400;
   color: $text-color;
   background: url(../assets/img/body-bg.png) no-repeat center;
+  min-width: 320px;
+  position: relative;
 }
 
 h1,

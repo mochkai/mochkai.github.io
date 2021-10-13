@@ -5,5 +5,7 @@ export interface Gallery {
   tags: Array<string>,
   category: string,
   url: string,
-  icon?: string
+  icon?: string,
+  description?: string,
+  demoURL?: string
 }

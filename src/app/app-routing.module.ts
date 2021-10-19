@@ -11,7 +11,8 @@ const routes: Routes = [
   { path: 'portfolio', component: PortfolioGalleryComponent },
   { path: 'portfolio/:itemId', component: PortfolioDetailComponent },
   { path: 'social', component: SocialComponent },
-  { path: 'contact', component: ContactComponent }
+  { path: 'contact', component: ContactComponent },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

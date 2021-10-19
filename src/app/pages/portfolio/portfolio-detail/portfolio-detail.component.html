@@ -1,1 +1,23 @@
-<p>portfolio-detail works!</p>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12 mb-4">
+      <h1 class="float-left">{{item.title}}</h1>
+      <a href="{{item.url}}" class="link-ext float-right"><i class="fas fa-external-link-alt fa-2x"></i></a>
+    </div>
+  </div>
+  <div *ngIf='replitURL' class="row">
+    <div class="col-12">
+      <iframe frameborder="0" width="100%" height="500px" [src]="replitURL"></iframe>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 portfolio-tags">
+      <h2 *ngFor='let tag of item.tags' class="portfolio-tag">{{tag}}</h2>
+    </div>
+  </div>
+  <div *ngIf="item.description" class="row">
+    <div class="col-12 portfolio-description">
+      <p [innerHTML]="item.description"></p>
+    </div>
+  </div>
+</div>

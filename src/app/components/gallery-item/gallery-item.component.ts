@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Gallery } from 'src/app/models/Galley';
+import { RouterLink } from '@angular/router';
+import { Gallery } from 'src/app/models/Gallery';
 
 @Component({
   selector: 'app-gallery-item',

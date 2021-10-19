@@ -1434,3 +1434,23 @@ h6 {
 .form-select .nice-select::after {
   right: 20px;
 }
+
+.link-ext {
+  color: #ffffff;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+code {
+  font-family: monospace;
+  color: $primary-color;
+  background-color: #222222;
+  padding: 0.15em 0.4em;
+  border: #333 1px solid;
+}

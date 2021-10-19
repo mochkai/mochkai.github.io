@@ -1,18 +1,6 @@
-<section class="portfolio_area section_gap_top" id="portfolio">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="main_title text-left">
-          <h2>Recent Projects</h2>
-        </div>
-      </div>
-    </div>
-
-    <div class="filters-content">
-      <div class="row portfolio-grid">
-        <app-gallery-item *ngFor='let item of portfolioItems' [item]="item" class="col-lg-4 col-md-6 all latest">
-        </app-gallery-item>
-      </div>
-    </div>
+<div *ngIf="galleryItems" class="filters-content">
+  <div class="row gallery-grid">
+    <app-gallery-item *ngFor='let item of galleryItems' [item]="item" class="col-lg-4 col-md-6 all latest">
+    </app-gallery-item>
   </div>
-</section>
+</div>

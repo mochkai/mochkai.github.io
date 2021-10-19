@@ -25,4 +25,16 @@
 </section>
 <app-brands></app-brands>
 <app-work></app-work>
-<app-gallery></app-gallery>
+<section class="portfolio_area section_gap_top" id="portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="main_title text-left">
+          <h2>Recent Projects</h2>
+        </div>
+      </div>
+    </div>
+
+    <app-gallery [galleryItems]='portfolioItems' [isFeatured]='true'></app-gallery>
+  </div>
+</section>

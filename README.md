@@ -12,7 +12,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 1. First execute the Build Command
 ```
-ng build --prod;
+ng build --prod
 ```
 This will create the files in the `dist` folder.
 
@@ -24,4 +24,9 @@ git commit -a -m "Build for production"
 3. Push the dist folder into the subtree for the gh-pages branch
 ```
 git subtree push --prefix dist origin gh-pages
+```
+
+### One Line Command
+```
+ng build --prod;git commit -a -m "Build for production";git subtree push --prefix dist origin gh-pages
 ```

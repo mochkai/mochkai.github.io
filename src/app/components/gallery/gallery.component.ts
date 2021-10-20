@@ -9,7 +9,7 @@ import { Gallery } from 'src/app/models/Gallery';
 export class GalleryComponent implements OnInit {
   @Input() galleryItems: Gallery[] | null = null;
   @Input() isFeatured: boolean = false;
-  @Input() category!: string;
+  @Input() category?: string;
 
   constructor() { }
 

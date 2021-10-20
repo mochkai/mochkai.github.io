@@ -12,6 +12,7 @@ import { Portfolio } from 'src/app/models/Portfolio';
 })
 export class PortfolioDetailComponent implements OnInit {
   item: Portfolio;
+  relatedItems: Portfolio[];
   replitURL: SafeResourceUrl | null = null;
 
   constructor(private route: ActivatedRoute, private router: Router, private sanitizer: DomSanitizer) {
@@ -22,6 +23,8 @@ export class PortfolioDetailComponent implements OnInit {
       let tempURL = "https://replit.com/@mochkai/" + this.item.replit + "?lite=true";
       this.replitURL = this.sanitizer.bypassSecurityTrustResourceUrl(tempURL);
     }
+
+    this.relatedItems = PORTFOLIO_ITEMS.filter(_item => (_item.id != this.item.id && _item.category == this.item.category));
   }
 
   ngOnInit(): void {

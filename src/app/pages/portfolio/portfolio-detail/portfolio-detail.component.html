@@ -15,9 +15,14 @@
       <h2 *ngFor='let tag of item.tags' class="portfolio-tag">{{tag}}</h2>
     </div>
   </div>
-  <div *ngIf="item.description" class="row">
+  <div *ngIf="item.description" class="row mt-5">
     <div class="col-12 portfolio-description">
       <p [innerHTML]="item.description"></p>
+    </div>
+  </div>
+  <div *ngIf="relatedItems.length > 0" class="row mt-5">
+    <div class="col-12">
+      <app-gallery [galleryItems]="relatedItems" [category]="item.category"></app-gallery>
     </div>
   </div>
 </div>

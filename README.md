@@ -18,7 +18,7 @@ This will create the files in the `dist` folder.
 
 2. Then commit to the git repository
 ```
-git commit -m "Build for production"
+git commit -a -m "Build for production"
 ```
 
 3. Push the dist folder into the subtree for the gh-pages branch

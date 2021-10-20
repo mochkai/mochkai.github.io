@@ -1,33 +1,27 @@
-# MochkaiGithubIo
+# Mochkai.Github.Io
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
+It uses the framework for deploying Mochkai's personal portfolio.
+If you want to see the full process and the live coding session check out mochkai's [Twitch|https://www.twitch.tv/mochkai] and [Youtube|https://youtube.com/channel/UCdNQsPmDe_R59iMgIJfmCKQ]
 
-## Development server
+## Run a local development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
 ## Deployment on github pages
 
+1. First execute the Build Command
 ```
-ng build --prod; git subtree push --prefix dist origin gh-pages
+ng build --prod;
+```
+This will create the files in the `dist` folder.
+
+2. Then commit to the git repository
+```
+git commit -m "Build for production"
+```
+
+3. Push the dist folder into the subtree for the gh-pages branch
+```
+git subtree push --prefix dist origin gh-pages
 ```

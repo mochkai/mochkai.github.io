@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
 It uses the framework for deploying Mochkai's personal portfolio.
-If you want to see the full process and the live coding session check out mochkai's [Twitch|https://www.twitch.tv/mochkai] and [Youtube|https://youtube.com/channel/UCdNQsPmDe_R59iMgIJfmCKQ]
+If you want to see the full process and the live coding session check out mochkai's [Twitch](https://www.twitch.tv/mochkai) and [Youtube](https://youtube.com/channel/UCdNQsPmDe_R59iMgIJfmCKQ)
 
 ## Run a local development server
 

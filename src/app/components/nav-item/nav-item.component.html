@@ -1,12 +1,12 @@
-<li *ngIf="noSubmenu; else submenu" class="nav-item"><a class="nav-link" href="{{navItem.route}}">{{navItem.label}}</a></li>
+<li *ngIf="noSubmenu; else submenu" class="nav-item"><a class="nav-link"
+    routerLink="{{navItem.route}}">{{navItem.label}}</a></li>
 
 <ng-template #submenu>
-    <li class="nav-item submenu dropdown" >
-        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-         aria-expanded="false">{{navItem.label}}</a>
-        <ul class="dropdown-menu">
-            <app-nav-item *ngFor="let subItem of navItem.submenu" [nav-item]="subItem"></app-nav-item>
-        </ul>
-      </li>
+  <li class="nav-item submenu dropdown">
+    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+      aria-expanded="false">{{navItem.label}}</a>
+    <ul class="dropdown-menu">
+      <app-nav-item *ngFor="let subItem of navItem.submenu" [nav-item]="subItem"></app-nav-item>
+    </ul>
+  </li>
 </ng-template>
-

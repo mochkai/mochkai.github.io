@@ -23,7 +23,7 @@ git commit -a -m "Build for production"
 
 3. Push the dist folder into the subtree for the gh-pages branch
 ```
-git subtree push --prefix dist origin gh-pages
+git subtree push --prefix gh-pages origin gh-pages
 ```
 
 ### One Line Command

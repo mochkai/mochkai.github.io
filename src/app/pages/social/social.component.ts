@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { INSTAGRAM_FEED } from 'src/app/data/instagram-embed';
 import { ScriptService } from 'src/app/services/script.service';
 
 declare let Twitch: any;
+declare let instgrm: any;
 
 @Component({
   selector: 'app-social',
@@ -9,11 +12,12 @@ declare let Twitch: any;
   styleUrls: ['./social.component.scss']
 })
 export class SocialComponent implements OnInit {
+  instagramEmbed: any = null;
 
   private scriptLoader: Promise<any>;
 
-  constructor(private scriptService: ScriptService) {
-    this.scriptLoader = this.scriptService.load('twitchEmbed');
+  constructor(private scriptService: ScriptService, private sanitizer: DomSanitizer) {
+    this.scriptLoader = this.scriptService.load('twitchEmbed', 'instagramEmbed');
   }
 
   ngOnInit(): void {
@@ -26,6 +30,10 @@ export class SocialComponent implements OnInit {
           channel: "mochkai",
           autoplay: true
         });
+
+        this.instagramEmbed = this.sanitizer.bypassSecurityTrustHtml(INSTAGRAM_FEED);
+
+        setTimeout(() => { instgrm.Embeds.process(); }, 500);
       }
     });
   }

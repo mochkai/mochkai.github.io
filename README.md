@@ -28,5 +28,5 @@ git subtree push --prefix gh-pages origin gh-pages
 
 ### One Line Command
 ```
-ng build --prod;git commit -a -m "Build for production";git subtree push --prefix dist origin gh-pages
+ng build --prod; git commit -a -m "Build for production";git subtree push --prefix dist origin gh-pages
 ```

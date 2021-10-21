@@ -6,6 +6,7 @@ import { GalleryItemComponent } from './gallery-item/gallery-item.component';
 import { BrandsComponent } from './brands/brands.component';
 import { WorkComponent } from './work/work.component';
 import { DescriptionComponent } from './description/description.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -27,7 +28,8 @@ import { DescriptionComponent } from './description/description.component';
     DescriptionComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ]
 })
 export class ComponentsModule { }

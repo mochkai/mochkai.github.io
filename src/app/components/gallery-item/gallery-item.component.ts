@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 import { Gallery } from 'src/app/models/Gallery';
 
 @Component({
@@ -10,7 +10,7 @@ import { Gallery } from 'src/app/models/Gallery';
 export class GalleryItemComponent implements OnInit {
   @Input() item!: Gallery;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     if (!this.item.image) {
@@ -25,6 +25,10 @@ export class GalleryItemComponent implements OnInit {
           this.item.icon = 'code';
       }
     }
+  }
+
+  forceNavigate(url?: string): void {
+    this.router.navigate([url]);
   }
 
 }

@@ -1,5 +1,5 @@
 <div class="portfolio_box">
-  <a href="{{item.url}}">
+  <a [routerLink]="[item.url]" [replaceUrl]="true">
     <div class="single_portfolio">
       <img class="img-fluid w-100" src="{{item.image}}" alt="">
       <div class="overlay"></div>

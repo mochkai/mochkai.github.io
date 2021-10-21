@@ -6,6 +6,7 @@ import { PortfolioDetailComponent } from './portfolio/portfolio-detail/portfolio
 import { PortfolioGalleryComponent } from './portfolio/portfolio-gallery/portfolio-gallery.component';
 import { SocialComponent } from './social/social.component';
 import { ContactComponent } from './contact/contact.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -26,7 +27,8 @@ import { ContactComponent } from './contact/contact.component';
   ],
   imports: [
     CommonModule,
-    ComponentsModule
+    ComponentsModule,
+    RouterModule
   ]
 })
 export class PagesModule { }

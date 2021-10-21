@@ -11,24 +11,31 @@ import { Portfolio } from 'src/app/models/Portfolio';
   styleUrls: ['./portfolio-detail.component.scss']
 })
 export class PortfolioDetailComponent implements OnInit {
-  item: Portfolio;
-  relatedItems: Portfolio[];
+  item!: Portfolio;
+  relatedItems!: Portfolio[];
   replitURL: SafeResourceUrl | null = null;
 
   constructor(private route: ActivatedRoute, private router: Router, private sanitizer: DomSanitizer) {
-    this.item = PORTFOLIO_ITEMS[this.route.snapshot.params['itemId']];
-    if (!this.item) router.navigate(['/']);
+    this.route.paramMap.subscribe(paramMap => {
+      this.item = PORTFOLIO_ITEMS[Number(paramMap.get('itemId'))];
 
-    if (this.item.replit) {
-      let tempURL = "https://replit.com/@mochkai/" + this.item.replit + "?lite=true";
-      this.replitURL = this.sanitizer.bypassSecurityTrustResourceUrl(tempURL);
-    }
+      if (!this.item)
+        this.router.navigate(['/portfolio']);
 
-    this.relatedItems = PORTFOLIO_ITEMS.filter(_item => (_item.id != this.item.id && _item.category == this.item.category));
+      if (this.item.replit) {
+        let tempURL = "https://replit.com/@mochkai/" + this.item.replit + "?lite=true";
+        this.replitURL = this.sanitizer.bypassSecurityTrustResourceUrl(tempURL);
+      }
+
+      this.relatedItems = PORTFOLIO_ITEMS.filter(_item => (_item.id != this.item.id && _item.category == this.item.category));
+    });
   }
 
   ngOnInit(): void {
-    console.log(this.item);
+
   }
 
+  ngOnDestroy(): void {
+    this.replitURL = null;
+  }
 }

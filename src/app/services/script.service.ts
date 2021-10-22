@@ -5,7 +5,8 @@ interface Scripts {
 }
 export const ScriptStore: Scripts[] = [
   { name: 'twitchEmbed', src: 'https://embed.twitch.tv/embed/v1.js' },
-  { name: 'instagramEmbed', src: 'https://www.instagram.com/embed.js' }
+  { name: 'instagramEmbed', src: 'https://www.instagram.com/embed.js' },
+  { name: 'twitterEmbed', src: 'https://platform.twitter.com/widgets.js' }
 ];
 
 @Injectable({

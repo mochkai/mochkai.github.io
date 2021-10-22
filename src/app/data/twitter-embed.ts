@@ -1,0 +1,1 @@
+export const TWITTER_FEED = `<a class="twitter-timeline" href="https://twitter.com/Mochkai2?ref_src=twsrc%5Etfw">Tweets by Mochkai2</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>`

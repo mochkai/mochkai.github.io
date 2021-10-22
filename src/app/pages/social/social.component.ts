@@ -13,11 +13,17 @@ declare let instgrm: any;
 })
 export class SocialComponent implements OnInit {
   instagramEmbed: any = null;
+  twitterFeed: any = null;
 
   private scriptLoader: Promise<any>;
 
   constructor(private scriptService: ScriptService, private sanitizer: DomSanitizer) {
-    this.scriptLoader = this.scriptService.load('twitchEmbed', 'instagramEmbed');
+    this.scriptLoader = this.scriptService.load('twitchEmbed', 'instagramEmbed', 'twitterEmbed');
+    this.instagramEmbed = this.sanitizer.bypassSecurityTrustHtml(INSTAGRAM_FEED.replace('_postID_', 'CVUYvASop3t'));
+
+    this.twitterFeed = `<a class="twitter-timeline" data-height="800" data-theme="dark"
+      href="https://twitter.com/Mochkai2?ref_src=twsrc%5Etfw">Tweets by
+      Mochkai2</a>`;
   }
 
   ngOnInit(): void {
@@ -30,10 +36,6 @@ export class SocialComponent implements OnInit {
           channel: "mochkai",
           autoplay: true
         });
-
-        this.instagramEmbed = this.sanitizer.bypassSecurityTrustHtml(INSTAGRAM_FEED);
-
-        setTimeout(() => { instgrm.Embeds.process(); }, 500);
       }
     });
   }

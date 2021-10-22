@@ -11,11 +11,7 @@ import { PagesModule } from './pages/pages.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    NavItemComponent,
-    NavComponent,
-    FooterComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,11 @@ import { PortfolioGalleryComponent } from './portfolio/portfolio-gallery/portfol
 import { SocialComponent } from './social/social.component';
 import { ContactComponent } from './contact/contact.component';
 import { RouterModule } from '@angular/router';
+import { PageComponent } from './page/page.component';
+import { HeaderComponent } from '../components/header/header.component';
+import { NavItemComponent } from '../components/nav-item/nav-item.component';
+import { NavComponent } from '../components/nav/nav.component';
+import { FooterComponent } from '../components/footer/footer.component';
 
 
 
@@ -16,7 +21,12 @@ import { RouterModule } from '@angular/router';
     PortfolioGalleryComponent,
     PortfolioDetailComponent,
     SocialComponent,
-    ContactComponent
+    ContactComponent,
+    PageComponent,
+    HeaderComponent,
+    NavItemComponent,
+    NavComponent,
+    FooterComponent
   ],
   exports: [
     HomeComponent,

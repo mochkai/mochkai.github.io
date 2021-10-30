@@ -13,4 +13,5 @@ export interface Portfolio {
   replit?: string,
   video?: string,
   liveDemo?: string
+  demoURL?: string
 }

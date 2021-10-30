@@ -19,16 +19,16 @@ export const PORTFOLIO_ITEMS: Portfolio[] = [
     order: 1,
     //image?: string,
     title: 'Number Conversion',
-    description: "This is a C# library created for converting regular numbers into their roman counterparts.<br>\
-    Feel free to edit the code above to test the demo you can try and break it as much as you'd like!!<br>\
-    You can initiate the Class by calling <code>new RomanNumber()</code> constructor. <br><br>\
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam efficitur tellus nec libero luctus, eu porttitor odio placerat. In eu mattis dolor. Phasellus ut commodo tellus. Nulla facilisi. Vivamus malesuada dui et diam faucibus, vitae maximus mauris pretium. Integer sagittis metus nunc, quis interdum odio tincidunt vitae. Sed nec orci nec turpis blandit lacinia. Curabitur vulputate maximus scelerisque. Phasellus vel imperdiet elit.",
+    description: `This is a C# library created for converting regular numbers into their roman counterparts.<br>
+    Feel free to edit the code above to test the demo you can try and break it as much as you'd like!!<br>
+    You can initiate the Class by calling <code>new RomanNumber()</code> constructor. <br><br>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam efficitur tellus nec libero luctus, eu porttitor odio placerat. In eu mattis dolor. Phasellus ut commodo tellus. Nulla facilisi. Vivamus malesuada dui et diam faucibus, vitae maximus mauris pretium. Integer sagittis metus nunc, quis interdum odio tincidunt vitae. Sed nec orci nec turpis blandit lacinia. Curabitur vulputate maximus scelerisque. Phasellus vel imperdiet elit.`,
     tags: ['C#', 'NuGet Package'],
     category: 'library',
     route: '/portfolio/1',
     url: 'https://github.com/mochkai/Number-Conversion',
-    featured: false,
-    replit: "Roman-Numbers-Demo"
+    featured: true,
+    demoURL: 'https://replit.com/@mochkai/Roman-Numbers-Demo?lite=true'
   },
   {
     id: 2,
@@ -42,6 +42,7 @@ export const PORTFOLIO_ITEMS: Portfolio[] = [
     category: 'web',
     route: '/portfolio/2',
     url: 'https://github.com/mochkai/photo-canvas',
-    featured: true
+    featured: true,
+    demoURL: 'https://photo-canvas-demo--mochkai.repl.co/'
   }
 ];

@@ -13,7 +13,7 @@ import { Portfolio } from 'src/app/models/Portfolio';
 export class PortfolioDetailComponent implements OnInit {
   item!: Portfolio;
   relatedItems!: Portfolio[];
-  replitURL: SafeResourceUrl | null = null;
+  iframeSrc: SafeResourceUrl | null = null;
 
   constructor(private route: ActivatedRoute, private router: Router, private sanitizer: DomSanitizer) {
     this.route.paramMap.subscribe(paramMap => {
@@ -22,20 +22,22 @@ export class PortfolioDetailComponent implements OnInit {
       if (!this.item)
         this.router.navigate(['/portfolio']);
 
-      if (this.item.replit) {
-        let tempURL = "https://replit.com/@mochkai/" + this.item.replit + "?lite=true";
-        this.replitURL = this.sanitizer.bypassSecurityTrustResourceUrl(tempURL);
+      this.iframeSrc = null;
+
+      if (this.item.demoURL) {
+        this.iframeSrc = this.sanitizer.bypassSecurityTrustResourceUrl(this.item.demoURL);
       }
+
+      console.log(this.iframeSrc);
 
       this.relatedItems = PORTFOLIO_ITEMS.filter(_item => (_item.id != this.item.id && _item.category == this.item.category));
     });
   }
 
   ngOnInit(): void {
-
   }
 
   ngOnDestroy(): void {
-    this.replitURL = null;
+    this.iframeSrc = null;
   }
 }

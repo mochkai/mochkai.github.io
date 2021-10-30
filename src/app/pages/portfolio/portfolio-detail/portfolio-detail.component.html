@@ -5,9 +5,9 @@
       <a href="{{item.url}}" class="link-ext float-right"><i class="fas fa-external-link-alt fa-2x"></i></a>
     </div>
   </div>
-  <div *ngIf='replitURL' class="row">
+  <div *ngIf='iframeSrc' class="row">
     <div class="col-12">
-      <iframe frameborder="0" width="100%" height="500px" [src]="replitURL"></iframe>
+      <iframe frameborder="0" width="100%" height="500px" [src]="iframeSrc"></iframe>
     </div>
   </div>
   <div class="row">

@@ -1,4 +1,23 @@
-<app-banner></app-banner>
+<section class="home_banner_area">
+  <div class="banner_inner">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="banner_content">
+            <h3 class="text-uppercase">Hell0</h3>
+            <h1 class="text-uppercase">I am Mochkai</h1>
+            <h5 class="text-uppercase">senior software developer</h5>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="home_right_img">
+            <img class="" src="img/banner/home-right.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="description-area section_gap_top" id="description">
   <div class="container">
     <div class="row">
@@ -23,8 +42,54 @@
     </div>
   </div>
 </section>
-<app-brands></app-brands>
-<app-work></app-work>
+<section class="brands-area section_gap_top" id="brands">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="main_title text-left">
+          <h2>Brands I Worked With</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="row">
+          <div *ngFor="let item of brandItems" class="col-lg-2 col-md-4 col-6">
+            <a href="{{item.url || '#'}}">
+              <div class="brand-item">
+                <img src="{{item.image}}" />
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="work-area section_gap_top" id="work">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="main_title text-left">
+          <h2>Companies in my journey</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="row justify-content-center">
+          <div *ngFor="let item of workItems" class="col-lg-3 col-sm-6 col-12">
+            <div class="work-item">
+              <img src="{{item.image}}" />
+              <h3>{{item.title}}</h3>
+              <p>{{item.description}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="portfolio_area section_gap_top" id="portfolio">
   <div class="container">
     <div class="row">
